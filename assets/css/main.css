@@ -1,0 +1,237 @@
+html, body {
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+footer{
+  background-color: #eee;
+}
+
+.bg-p{ background-color: #18191a;}
+.bg-s{ background-color: #242526;}
+.bg-t{ background-color: #3a3b3c;}
+.bg-c{ background-color: #a8abaf;}
+
+.text-p{color: #18191a;}
+.text-s{color: #242526;}
+.text-t{color: #3a3b3c;}
+.text-c{color: #a8abaf;}
+
+hr{
+  background-color: #3a3b3c;
+}
+
+.bg-grey{ background-color: #eee;}
+.bg-black{ background-color: #000;}
+.bg-blacklight{ background-color: #242526;}
+
+.fixed-top-margin{ height: 30px; }
+
+.btn{
+  border-radius:0px;
+}
+.navbar-top{
+  background-color: #eee;
+}
+
+textarea:hover, 
+input:hover, 
+textarea:active, 
+input:active, 
+textarea:focus, 
+input:focus,
+button:focus,
+button:active,
+button:hover,
+label:focus,
+.btn:active,
+.btn.active
+{
+    outline:0px !important;
+    -webkit-appearance:none;
+    box-shadow: none !important;
+}
+
+._scroll{
+  height: calc(115vh - 200px);
+  display: block; 
+  position: relative; 
+  overflow: auto;
+}
+
+
+.full-height-right {
+  width: 300px;
+  position: fixed;
+  bottom: 40px !important;
+  top: 60px;
+  right: 0px;
+}
+.full-height-left {
+  width: 150px;
+  position: fixed;
+  bottom: 40px !important;
+  top: 0px;
+  left: 0px;
+}
+
+
+
+.panel_right-bottom{
+  position: absolute;
+  bottom: 0px !important;
+  right: 0px;
+  left:0px;  
+  z-index: 9999 !important
+}
+.product_box .card{
+  border-radius: 0px;
+}
+.product_box{
+ transition: all .1s ease-in-out; 
+}
+
+
+
+.product_box:active, 
+.product_box .card:active{
+  transform: scale(1.1);
+  z-index: 99999;
+}
+.product_box:hover{ 
+  text-decoration: none;
+}
+
+
+.product_box .price{
+  position: absolute !important;
+  right: 0px !important;
+  height: 28px; 
+  width: 50%;
+  text-align: right;
+  margin-top: 20px;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px
+
+}
+
+
+
+
+.spinner {
+  display:    none;
+  position:   fixed;
+  z-index:    1000;
+  top:        0;
+  left:       0;
+  height:     100%;
+  width:      100%;
+  background: rgba( 1, 1, 1, .8 )
+  url('../images/spinner.gif')
+  50% 50%
+  no-repeat;
+}
+body.loading {
+  overflow: hidden;
+}
+body.loading .spinner {
+  display: block;
+}
+
+
+
+#filter {
+  background-image: url('../images/searchicon.png'); /* Add a search icon to input */
+  background-position: 10px 12px; /* Position the search icon */
+  background-repeat: no-repeat; /* Do not repeat the icon image */
+  background-color: #18191a;
+  width: 50%; /* Full-width */
+  font-size: 15px; /* Increase font-size */
+  color: #a8abaf;
+  padding: 12px 20px 12px 40px; /* Add some padding */
+  border:0px;
+  border-bottom: 1px solid #3a3b3c; /* Add a grey border */
+  margin-bottom: 12px; /* Add some space below the input */
+  height: 44px;
+}
+
+#filter:focus{
+  background-color: #242526;
+}
+.hidden {
+	display: none;
+}
+
+
+
+.modal-dialog {
+    min-height: calc(100vh - 60px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    overflow: auto;
+}
+@media(max-width: 768px) {
+  .modal-dialog {
+    min-height: calc(100vh - 20px);
+  }
+}
+
+
+
+
+
+/* The snackbar - position it at the bottom and in the middle of the screen */
+#snackbar {
+  visibility: hidden; /* Hidden by default. Visible on click */
+  min-width: 250px; /* Set a default minimum width */
+  margin-left: -125px; /* Divide value of min-width by 2 */
+  background-color: #333; /* Black background color */
+  color: #fff; /* White text color */
+  text-align: center; /* Centered text */
+  border-radius: 2px; /* Rounded borders */
+  padding: 16px; /* Padding */
+  position: fixed; /* Sit on top of the screen */
+  z-index: 1; /* Add a z-index if needed */
+  left: 50%; /* Center the snackbar */
+  top: 20px; /* 30px from the bottom */
+}
+
+#snackbar.show {
+  visibility: visible; /* Show the snackbar */
+  -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+  animation: fadein 0.5s, fadeout 0.5s 2.5s;
+}
+
+@-webkit-keyframes fadein {
+  from {top: 0; opacity: 0;}
+  to {top: 20px; opacity: 1;}
+}
+
+@keyframes fadein {
+  from {top: 0; opacity: 0;}
+  to {top: 20px; opacity: 1;}
+}
+
+@-webkit-keyframes fadeout {
+  from {top: 20px; opacity: 1;}
+  to {top: 0; opacity: 0;}
+}
+
+@keyframes fadeout {
+  from {top: 20px; opacity: 1;}
+  to {top: 0; opacity: 0;}
+}
+
+@media print{ #ticket{ height:100%;overflow:visible; } } 
+
+.ticket-view{
+  height: calc(40vh - 100px);
+  overflow: auto;
+}
+
+.ticket-hide{
+  height: 0px;
+  width: 0px;
+  overflow: hidden;
+}
